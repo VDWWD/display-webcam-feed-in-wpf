@@ -30,6 +30,10 @@ namespace CaptureWebcam
 
             //init the camera
             capture = new VideoCapture();
+            
+            //set the captured frame width and height (default 640x480)
+            capture.Set(CapProp.FrameWidth, 1024);
+            capture.Set(CapProp.FrameHeight, 768);            
 
             //create a timer that refreshes the webcam feed
             timer = new Timer()
